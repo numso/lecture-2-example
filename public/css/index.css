@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #ccc;
+}
+
+.menu {
+  background-color: #555;
+  color: #eee;
+  box-shadow: 0 0 20px 2px rgba(0,0,0,.5)
+}
+
+.welcome {
+  display: inline-block;
+  font-size: 30px;
+  padding: 10px 40px;
+}
+
+.logout {
+  display: inline-block;
+  float: right;
+  font-size: 20px;
+  padding: 15px 40px;
+}
+
+.logout:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.subtitle {
+  padding: 30px;
+}
+
+#assignments {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.assignment {
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+
+.assignment:last-of-type {
+  border-bottom: none;
+}
+
+.cell {
+  display: inline-block;
+  width: 33%;
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-block;
+  width: 100px;
+}
+
+.no {
+  background-color: red;
+}
+
+.yes {
+  background-color: green;
+}
+
+#newAssignment {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+}
