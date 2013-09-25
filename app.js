@@ -51,7 +51,7 @@ app.post('/signup', function (req, res) {
   users[req.body.user] = {
     user: req.body.user,
     pass: req.body.pass,
-    isTeacher: req.body.isTeacher
+    isTeacher: req.body.isTeacher == 'true'
   };
 
   req.session.user = users[req.body.user];
@@ -103,10 +103,12 @@ var hw = [];
 var grades = {};
 
 app.get('/hw', security, function (req, res) {
-  res.send({
-    success: true,
-    hw: hw
-  });
+  setTimeout(function () {
+    res.send({
+      success: true,
+      hw: hw
+    });
+  }, 200);
 });
 
 app.post('/hw', security, function (req, res) {
@@ -155,7 +157,7 @@ app.get('/grades/:name', security, getGrades);
 app.post('/grade', security, function (req, res) {
   var name = req.session.user.user;
   grades[name] = grades[name] || {};
-  grades[name][req.body.id] = !!req.body.complete;
+  grades[name][req.body.id] = req.body.complete == 'true';
 
   res.send({
     success: true
