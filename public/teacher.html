@@ -15,7 +15,7 @@
   <h3 class="subtitle">Current Assignments:</h3>
 
   <div id="assignments">
-    You Haven't Created Any
+    <span class="none">You Haven't Created Any</span>
     <!-- <div class="assignment">
       <div class="cell">Homework 1</div>
       <div class="cell">Monday, September 23, 2013</div>
@@ -27,10 +27,15 @@
 
   <div id="newAssignment">
     <div class="assignment">
-      <div class="cell">Name: <input type="text"></div>
-      <div class="cell">Date: <input type="date"></div>
-      <div class="cell"><button class="btn">Add</button></div>
+      <form>
+        <div class="cell">Name: <input id="name" type="text"></div>
+        <div class="cell">Date: <input id="date" type="date"></div>
+        <div class="cell"><input id="add" class="btn" type="submit" value="Add"></input></div>
+      </form>
     </div>
   </div>
+
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/teacher.js"></script>
 </body>
 </html>
