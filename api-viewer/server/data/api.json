@@ -1,0 +1,233 @@
+[
+  {
+    "group":"Authentication",
+    "url":"/signup",
+    "description":"Signs you up for an account.",
+    "method":"POST",
+    "example_data":{
+      "user":"bubba",
+      "pass":"jones123",
+      "isTeacher": false
+    },
+    "example_resp":{
+      "success":true,
+      "user": {
+        "user": "bubba",
+        "pass": "jones123",
+        "isTeacher": "false"
+      }
+    },
+    "resp":{
+      "success":"Boolean",
+      "user": "User",
+      "err":"String"
+    },
+    "data":{
+      "user":"String",
+      "pass":"String",
+      "isTeacher":"Boolean"
+    }
+  },
+  {
+    "group":"Authentication",
+    "url":"/login",
+    "description":"Logs you in to the server.",
+    "method":"POST",
+    "example_data":{
+      "user":"bubba",
+      "pass":"jones234"
+    },
+    "example_resp":{
+      "success":false,
+      "err":"Incorrect Username or Password"
+    },
+    "resp":{
+      "success":"Boolean",
+      "user": "User",
+      "err":"String"
+    },
+    "data":{
+      "user":"String",
+      "pass":"String"
+    }
+  },
+  {
+    "group":"Authentication",
+    "url":"/user",
+    "description":"Gets the currently logged in user or returns 403 Unauthorized.",
+    "method":"GET",
+    "example_resp":{
+      "success":true,
+      "user": {
+        "user": "bubba",
+        "pass": "jones123",
+        "isTeacher": "false"
+      }
+    },
+    "resp":{
+      "success": "Boolean",
+      "user":"User",
+      "err": "String"
+    }
+  },
+  {
+    "group":"Authentication",
+    "url":"/logout",
+    "description":"Logs you out of the server.",
+    "method":"POST",
+    "example_resp":"ok",
+    "resp":"String"
+  },
+
+  {
+    "group":"Assignments",
+    "url":"/hw",
+    "description":"Gets a list of homework or returns 403 Unauthorized.",
+    "method":"GET",
+
+    "example_resp":{
+      "success":true,
+      "hw": [
+        {
+          "id": 84734,
+          "name": "Assignment 1",
+          "dueDate": 1380676851162
+        },
+        {
+          "id": 22018,
+          "name": "Assignment 2",
+          "dueDate": 1380677000394
+        }
+      ]
+    },
+    "resp":{
+      "success": "Boolean",
+      "hw":"[HW]",
+      "err": "String"
+    }
+  },
+  {
+    "group":"Assignments",
+    "url":"/hw",
+    "description":"Adds an assigment to the list of all assignments or returns 403 Unauthorized.",
+    "method":"POST",
+    "data": {
+      "name": "String",
+      "dueDate": "Number"
+    },
+    "example_data": {
+      "name": "Assignment 1",
+      "dueDate": 1380676851162
+    },
+    "example_resp":{
+      "success":true,
+      "id": 84734
+    },
+    "resp":{
+      "success": "Boolean",
+      "id": "Number",
+      "err": "String"
+    }
+  },
+  {
+    "group":"Assignments",
+    "url":"/hw",
+    "description":"Deletes an assigment from the list of all assignments or returns 403 Unauthorized.",
+    "method":"DELETE",
+    "data": {
+      "id": "Number"
+    },
+    "example_data": {
+      "id": 45346
+    },
+    "example_resp":{
+      "success": false,
+      "err": "Assigment ID 45346 doesn't exist."
+    },
+    "resp":{
+      "success": "Boolean",
+      "err": "String"
+    }
+  },
+  {
+    "group":"Grades",
+    "url":"/grades",
+    "description":"Gets a key-value list of all the currently logged in student's grades or returns 403 Unauthorized.",
+    "method":"GET",
+    "example_resp":{
+      "success": true,
+      "grades": {
+        "84734": false,
+        "22018": true
+      }
+    },
+    "resp":{
+      "success": "Boolean",
+      "err": "String",
+      "grades": "{Grades}"
+    }
+  },
+  {
+    "group":"Grades",
+    "url":"/grades/:studentName",
+    "description":"Gets a key-value list of all studentName's grades or returns 403 Unauthorized.",
+    "method":"GET",
+    "example_resp":{
+      "success": false,
+      "err": "You aren't a teacher. You can't access that."
+    },
+    "resp":{
+      "success": "Boolean",
+      "err": "String",
+      "grades": "{Grades}"
+    }
+  },
+  {
+    "group":"Grades",
+    "url":"/grade",
+    "description":"Updates the grade for the currently logged in user or returns 403 Unauthorized.",
+    "method":"POST",
+    "data": {
+      "id": "Number",
+      "complete": "Boolean"
+    },
+    "example_data": {
+      "id": 84734,
+      "complete": true
+    },
+    "example_resp":{
+      "success": true
+    },
+    "resp":{
+      "success": "Boolean",
+      "err": "String"
+    }
+  },
+
+  {
+    "group":"Miscellaneous",
+    "url":"/students",
+    "description":"AAAAAAAAA or returns 403 Unauthorized.",
+    "method":"GET",
+    "example_resp":{
+      "success": true,
+      "students": [
+        {
+          "user": "bubba",
+          "pass": "jones123",
+          "isTeacher": false
+        },
+        {
+          "user": "fred",
+          "pass": "schmidt123",
+          "isTeacher": false
+        }
+      ]
+    },
+    "resp":{
+      "success": "Boolean",
+      "err": "String",
+      "students": "[Students]"
+    }
+  }
+]
