@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gradebook for Teachers</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+
+  <div class="menu">
+    <div class="welcome">Welcome, Teacher!</div>
+    <div class="logout">Logout</div>
+  </div>
+
+  <h3 class="subtitle">Current Assignments:</h3>
+
+  <div id="assignments">
+    <span class="none">You Haven't Created Any</span>
+    <!-- <div class="assignment">
+      <div class="cell">Homework 1</div>
+      <div class="cell">Monday, September 23, 2013</div>
+      <div class="cell"><button class="btn">Delete</button></div>
+    </div> -->
+  </div>
+
+  <h3 class="subtitle">New Assignment:</h3>
+
+  <div id="newAssignment">
+    <div class="assignment">
+      <form>
+        <div class="cell">Name: <input id="name" type="text"></div>
+        <div class="cell">Date: <input id="date" type="date"></div>
+        <div class="cell"><input id="add" class="btn" type="submit" value="Add"></input></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/teacher.js"></script>
+</body>
+</html>
