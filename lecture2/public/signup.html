@@ -13,28 +13,31 @@
     <form>
       <div class="login-el">
         <label>Username:</label>
-        <input type="text">
+        <input id="user" type="text">
       </div>
 
       <div class="login-el">
         <label>Password:</label>
-        <input type="password">
+        <input id="pass" type="password">
       </div>
 
       <div class="login-el">
         <label>Password Again:</label>
-        <input type="password">
+        <input id="pass2" type="password">
       </div>
 
       <div class="login-el">
-        <input type="checkbox">
+        <input id="isTeacher" type="checkbox">
         <label>I'm a teacher!</label>
       </div>
 
-      <input class="btn" type="submit" value="Sign Up">
+      <input id="submit" class="btn" type="submit" value="Sign Up">
     </form>
 
     <a href="/login.html" class="no-account">Already have an account?</a>
   </div>
+
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/signup.js"></script>
 </body>
 </html>
