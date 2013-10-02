@@ -1,3 +1,6 @@
+Lecture 2
+=========
+
 This is a simple app to teach about functions. The server is finished, as are the client html and css. All that needs done is the client-side javascript.
 
 ## API
