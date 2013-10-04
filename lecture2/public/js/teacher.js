@@ -1,3 +1,8 @@
+/*
+ * TODO:: Add a section to the teacher page to show a
+ * list of students and all of their current grades.
+ */
+
 /* global $ */
 'use strict';
 
