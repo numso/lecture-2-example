@@ -207,7 +207,7 @@
   {
     "group":"Miscellaneous",
     "url":"/students",
-    "description":"AAAAAAAAA or returns 403 Unauthorized.",
+    "description":"Gets a list of all Students or returns 403 Unauthorized.",
     "method":"GET",
     "example_resp":{
       "success": true,
