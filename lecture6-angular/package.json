@@ -1,0 +1,12 @@
+{
+  "name": "lecture6-angular",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.0",
+    "stylus": "*"
+  }
+}
