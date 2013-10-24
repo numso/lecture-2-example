@@ -1,0 +1,21 @@
+<table class="table">
+  <input type="text" ng-model="predicate">
+  <tr>
+    <th>Image</th>
+    <th>A Number</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Phone</th>
+  </tr>
+  <tr ng-repeat="student in students | orderBy:predicate ">
+    <td><img ng-src="{{student.img}}"></td>
+    <td>{{student.aNumber}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.gender}}</td>
+    <td>{{student.email}}</td>
+    <td>{{student.phone | phone}}</td>
+  </tr>
+</table>
